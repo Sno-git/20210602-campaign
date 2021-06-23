@@ -3,6 +3,7 @@ from Warehouse.fact_daily_policy_snapshot a
 left join Warehouse.dim_customers b
 on a.customer_key = b.customer_key
 where a.policy_status_key = 1
+#adding a new line also for vibes and testing
 and b.mobile_number not in (810882015,
 682112417,
 0,
@@ -8250,6 +8251,7 @@ and b.mobile_number not in (810882015,
 781405189,
 9494949499
 ) # paste list of mobile number
+#adding a new line to test
 and a.snapshot_date_key= @date_key
 group by b.mobile_number
 ;
